@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className='space-y-10'>
       <div className='flex flex-col md:flex-row'>
-        <div className='order-2 md:order-1 flex-1 py-4 flex flex-col justify-center md:text-center'>
+        <div className='order-2 md:order-1 flex-1 py-4 flex flex-col justify-center'>
           <div className='text-3xl font-extrabold'>Software Engineer</div>
           <div className='font-semibold text-xl'>Optum, UHG</div>
         </div>
