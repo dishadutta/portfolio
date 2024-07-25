@@ -28,7 +28,7 @@ export default function Footer() {
         <a href='https://twitter.com/disha_dutta20'>
           <AiOutlineTwitter size='28px' />
         </a>
-        <a href='https://www.youtube.com/channel/UCL-KeiScXWU5QYsNNLw-1Tg'>
+        <a href='https://www.youtube.com/@DishaVlogs-14'>
           <AiFillYoutube size='28px' />
         </a>
       </div>
@@ -36,7 +36,7 @@ export default function Footer() {
       <div className='flex'>
         <a
           className='text-sm font-bold tracking-widest'
-          href='https://drive.google.com/file/d/1UqQtjhjcQxfFbaflKrEUFrpgtMZ22a9d/view?usp=sharing'
+          href='https://drive.google.com/file/d/1ylYZLDIusQeak3HKe1CDE0X9FTWusfQa/view?usp=sharing'
         >
           Resume
         </a>

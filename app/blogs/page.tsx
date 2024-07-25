@@ -1,4 +1,11 @@
 import { blogPostData } from '@/data/blogData'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Portfolio - Blogs',
+  description:
+    'Portfolio of Disha Dutta, created using next.js and tailwind css',
+}
 
 export default function Blogs() {
   return (

@@ -1,6 +1,13 @@
 import { projectPostData } from '@/data/projectsData'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Portfolio - Projects',
+  description:
+    'Portfolio of Disha Dutta, created using next.js and tailwind css',
+}
 
 export default function Projects() {
   return (

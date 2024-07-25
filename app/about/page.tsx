@@ -18,6 +18,13 @@ import jest from '../../public/images/about/jest.png'
 import { LuChefHat } from 'react-icons/lu'
 import { RiFlightTakeoffFill } from 'react-icons/ri'
 import { GiGuitar } from 'react-icons/gi'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Portfolio - About Section',
+  description:
+    'Portfolio of Disha Dutta, created using next.js and tailwind css',
+}
 
 export default function Projects() {
   return (
