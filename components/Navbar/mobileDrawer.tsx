@@ -16,19 +16,25 @@ export default function MobileDrawer({ isOpen, onClose }: any) {
       </button>
       <ul className='flex flex-col justify-center items-center space-y-4'>
         <li className='text-3xl hover:text-blue-900 hover:font-semibold grid grid-flow-row'>
-          <Link className='p-5' href='/'>
+          <Link className='p-5' href='/' onClick={onClose}>
             Home
           </Link>
-          <Link className='p-5' href='/blogs'>
+          <Link className='p-5' href='/blogs' onClick={onClose}>
             Blogs
           </Link>
-          <Link className='p-5' href='/projects'>
+          <Link className='p-5' href='/projects' onClick={onClose}>
             Projects
           </Link>
-          <Link className='p-5' href='/about'>
+          <Link className='p-5' href='/about' onClick={onClose}>
             About
           </Link>
-          <button onClick={toggleTheme}>
+          <button
+            onClick={() => {
+              toggleTheme()
+              onClose()
+            }}
+            className='mx-auto'
+          >
             {theme === 'light' ? '🌞' : '🌙'}
           </button>
         </li>

@@ -8,7 +8,7 @@ import { ThemeProvider } from '@/components/context/ThemeContext'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Portfolio Home Page',
+  title: 'Disha Dutta - Portfolio',
   description:
     'Portfolio of Disha Dutta, created using next.js and tailwind css',
 }
