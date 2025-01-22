@@ -10,18 +10,13 @@ import jpmorgan from '../public/images/company/jpmorgan.jpg'
 import Typewriter from 'typewriter-effect'
 import { AiOutlineStar } from 'react-icons/ai'
 import { useState } from 'react'
+import { intro } from '@/data/introductionData'
 
 export default function Home() {
-  const [activeTypewriter, setActiveTypewriter] = useState(1)
-
-  const handleComplete = (index: number) => {
-    setActiveTypewriter(index + 1) // Activate the next typewriter
-  }
-
   return (
     <div className='space-y-10'>
       <div className='flex flex-col md:flex-row'>
-        <div className='order-2 md:order-1 flex-1 py-4 flex flex-col justify-center'>
+        <div className='order-2 md:order-1 flex-1 py-4 flex flex-col justify-center text-center md:text-left'>
           <div className='text-3xl font-extrabold'>Software Engineer</div>
           <div className='font-semibold text-xl'>Optum, UHG</div>
         </div>
@@ -33,102 +28,16 @@ export default function Home() {
           />
         </div>
       </div>
-      <ul>
-        <li className='list-disc flex items-center font-[580] text-lg'>
-          {activeTypewriter >= 1 && (
-            <>
-              <AiOutlineStar className='mr-2' />
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(
-                      'Experienced Software Engineer specializing in full-stack development, with a strong focus on frontend development.'
-                    )
-                    .pauseFor(4)
-                    .changeDelay(1)
-                    .callFunction(() => handleComplete(1))
-                    .start()
-                }}
-              />
-            </>
-          )}
-        </li>
-        <li className='list-disc flex items-center font-[580] text-lg'>
-          {activeTypewriter >= 2 && (
-            <>
-              <AiOutlineStar className='mr-2' />
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(
-                      'Passionate about creating visually appealing, responsive, and user-friendly websites.'
-                    )
-                    .pauseFor(4)
-                    .changeDelay(1)
-                    .callFunction(() => handleComplete(2))
-                    .start()
-                }}
-              />
-            </>
-          )}
-        </li>
-        <li className='list-disc flex items-center font-[580] text-lg'>
-          {activeTypewriter >= 3 && (
-            <>
-              <AiOutlineStar className='mr-2' />
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(
-                      'Proficient in modern frontend technologies and frameworks to ensure optimal website performance.'
-                    )
-                    .pauseFor(4)
-                    .changeDelay(1)
-                    .callFunction(() => handleComplete(3))
-                    .start()
-                }}
-              />
-            </>
-          )}
-        </li>
-        <li className='list-disc flex items-center font-[580] text-lg'>
-          {activeTypewriter >= 4 && (
-            <>
-              <AiOutlineStar className='mr-2' />
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(
-                      'Committed to crafting engaging digital experiences through thoughtful and effective design.'
-                    )
-                    .pauseFor(4)
-                    .changeDelay(1)
-                    .callFunction(() => handleComplete(4))
-                    .start()
-                }}
-              />
-            </>
-          )}
-        </li>
-        <li className='list-disc flex items-center font-[580] text-lg'>
-          {activeTypewriter >= 5 && (
-            <>
-              <AiOutlineStar className='mr-2' />
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(
-                      'Dedicated to continual learning and development to stay current with industry trends and advancements.'
-                    )
-                    .pauseFor(4)
-                    .changeDelay(1)
-                    .callFunction(() => handleComplete(5))
-                    .start()
-                }}
-              />
-            </>
-          )}
-        </li>
+      <ul className='flex flex-col space-y-3'>
+        {intro.map((item, index) => (
+          <li
+            className='list-disc flex items-center font-[580] text-lg'
+            key={index}
+          >
+            <AiOutlineStar className='mr-2' />
+            {item}
+          </li>
+        ))}
       </ul>
       <div className='font-semibold text-xl'>Experiences</div>
       <div className='grid grid-flow-row auto-rows-max space-y-3'>
